@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vue Beginners</title>
+    <!-- style -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Quicksand&display=swap">
+    <style>
+        body{
+            margin: 5%;
+            font-family: 'Quicksand', sans-serif;
+        }
+    </style>
+    <!-- /Sytle -->
+</head>
+<body>
+    <div id="app">
+        <!-- Header -->
+        <header>
+            <img src="assets/img/1200px-Vue.js_Logo_2.svg.png" alt="logo" width="80px;">
+            <h1 v-once>{{ getname() }}</h1>
+            <p>The Progresive Javascript Framework</p>
+        </header>
+        <!-- /Header -->
+
+        <!-- Footer -->
+        <footer id="footer">
+            <p>Copyright 2019</p>
+        </footer>
+        <!-- Footer -->
+    </div>
+
+    <!-- Script -->
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.0"></script>
+    <script>
+        const properties = {
+            name : 'Vue JS',
+            pesan : "Hello World!" 
+        };
+
+        const vm = new Vue({
+            el : '#app',
+            data : properties,
+            methods : {
+                getname : function(){
+                    return 'Hello, ' + this.name
+                }
+            }
+        })
+    </script>
+    <!-- /Script -->
+
+
+
+
+</body>
+</html>
